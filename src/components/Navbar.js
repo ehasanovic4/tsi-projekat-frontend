@@ -15,17 +15,17 @@ function Navbar() {
         <div className="leftSide" id={openLinks ? "open" : "close"}>
             <img src={Logo}/>
             <div className='hiddenLinks'>
-            <Link to="/">Pocetna</Link>
-            <Link to="/usluge">Usluge</Link>
+            <Link to="/">Početna</Link>
             <Link to="/onama">O nama</Link>
+            <Link to="/usluge">Usluge</Link>
             <Link to="/rezervisi">Rezerviši</Link>
             <Link to="/kontakt">Kontakt</Link>
             </div>
         </div>  
         <div className="rightSide">
-            <Link to="/">Pocetna</Link>
-            <Link to="/usluge">Usluge</Link>
+            <Link to="/">Početna</Link>
             <Link to="/onama">O nama</Link>
+            <Link to="/usluge">Usluge</Link>
             <Link to="/rezervisi">Rezerviši</Link>
             <Link to="/kontakt">Kontakt</Link>
             <button onClick={toggleNavbar}>

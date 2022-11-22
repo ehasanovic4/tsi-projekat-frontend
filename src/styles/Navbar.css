@@ -39,6 +39,7 @@
     cursor: pointer;
   }
   
+  /* svg se odnosi znak u desnom uglu kad se smanji ekran*/
   .navbar .rightSide svg {
     font-size: 40px;
   }

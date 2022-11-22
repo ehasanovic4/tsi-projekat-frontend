@@ -17,19 +17,16 @@
    -webkit-background-size: cover;
    -moz-background-size: cover;
    -o-background-size: cover;
-   background-size: cover; 
-
-   
+   background-size: cover;    
   }
   
   .headerContainer h1 {
+    right: 0;
     justify-content: center;
     align-items: center;
     font-size: 90px;
-    height: 60px;
-    nav-right: auto;
-    font-weight: 50;
-    
+    height: 60px;    
+    font-weight: 50;    
     color: indianred;
     font-family: "Lucida Handwriting", 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, serif;
   }
@@ -49,17 +46,16 @@
     }
     
   
-    .headerContainer {
-      margin-left: 0px;
-      border-radius: 10px;
-      padding: 10px;
-      width: 80%;
+    .headerContainer {      
+      width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-direction: column;
-      background-color: #121619;
-      color: white;
+      flex-direction: column;      
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;   
     }
   
     .headerContainer h1 {
