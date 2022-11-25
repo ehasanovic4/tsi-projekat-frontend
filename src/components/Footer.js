@@ -3,20 +3,15 @@ import InstagramIcon from '@mui/icons-material/Instagram'
 import FacebookIcon from '@mui/icons-material/Facebook'
 import MailIcon from '@mui/icons-material/Mail'
 import PhoneIcon from '@mui/icons-material/Phone'
-import '../styles/Kontakt.css';
+import '../styles/Footer.css';
 
-function Kontakt() {
+
+function Footer() {
   return (
-    <div className='kontakt'>
-    <div className='socialMedia'>
-        <InstagramIcon/>
-        <FacebookIcon/>
-        <MailIcon/>
-        <PhoneIcon/>
-      </div>
-      </div>
+    <div className='footer'>      
+      <p> &copy; 2022 glowup.com</p>      
+    </div>
   )
 }
 
-export default Kontakt
-
+export default Footer
