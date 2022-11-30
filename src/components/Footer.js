@@ -5,13 +5,18 @@ import MailIcon from '@mui/icons-material/Mail'
 import PhoneIcon from '@mui/icons-material/Phone'
 import '../styles/Footer.css';
 
-
 function Footer() {
   return (
-    <div className='footer'>      
-      <p> &copy; 2022 glowup.com</p>      
+    <div className="footer">
+      <div className="socialMedia">
+        <InstagramIcon/>
+        <FacebookIcon/>
+        <MailIcon/>
+        <PhoneIcon/>
+      </div>
+      <p> &copy; 2022 glowup.com</p>
     </div>
-  )
+  );
 }
 
-export default Footer
+export default Footer;

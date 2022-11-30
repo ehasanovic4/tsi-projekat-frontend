@@ -19,7 +19,6 @@ function Navbar() {
             <Link to="/onama">O nama</Link>
             <Link to="/usluge">Usluge</Link>
             <Link to="/rezervisi">Rezerviši</Link>
-            <Link to="/kontakt">Kontakt</Link>
             </div>
         </div>  
         <div className="rightSide">
@@ -27,7 +26,6 @@ function Navbar() {
             <Link to="/onama">O nama</Link>
             <Link to="/usluge">Usluge</Link>
             <Link to="/rezervisi">Rezerviši</Link>
-            <Link to="/kontakt">Kontakt</Link>
             <button onClick={toggleNavbar}>
             <ReorderIcon/>
             </button>

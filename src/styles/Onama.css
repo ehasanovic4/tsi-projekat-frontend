@@ -1,0 +1,38 @@
+.onama {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .onamaTop {
+    width: 100%;
+    height: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  }
+  
+  .onamaBottom {
+    /* 1. 2. i 4. nista? */
+    display: flex;
+    flex-direction: column;
+    height: 40%;
+    align-items: center;
+    margin-top: 50px;
+  }
+  
+  .onamaBottom p {
+    width: 1000px;
+  }
+  
+  .onama .onamaBottom h1 {
+    font-weight: 400;
+    font-size: 70px;
+    color: black;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    transform: translateY(-40px);
+  }
