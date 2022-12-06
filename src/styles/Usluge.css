@@ -6,6 +6,7 @@
     align-items: center;
     flex-direction: column;
     background-color:beige;
+    color: hsl(0,25%,40%);
   }
   .usluge .naslov {
     font-family: cursive;
