@@ -11,6 +11,7 @@ function Navbar() {
     }
 
   return (
+    <div className="navbarWrapper"> 
     <div className="navbar">
         <div className="leftSide" id={openLinks ? "open" : "close"}>
             <img src={Logo}/>
@@ -31,6 +32,11 @@ function Navbar() {
             </button>
         </div>  
     </div>
+    <div className="gradient"></div>
+
+    </div>
+
+   
   )
 }
 
