@@ -1,7 +1,7 @@
 .footer {
   width: 100%;
   height: 200px;
-  background-color: #121619;
+  background-color: hsl(0,25%,50%);
   display: flex; /*cemu ovo, i sledeca dva */
   justify-content: center;
   align-items: center;

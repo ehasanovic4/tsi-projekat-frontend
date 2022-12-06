@@ -17,10 +17,11 @@
 
 .headerContainer h1 {
   
-  font-size: 90px;
+  font-size: 70px;
   height: 60px;
   font-weight: 50;
-  color: black;
+  color: hsl(0,25%,40%);
+  
 }
 
 .headerContainer p {
@@ -28,8 +29,9 @@
   padding: 0;
   font-size: 40px;
   font-weight: lighter;
-  color: black;
+  color: hsl(0, 25%, 44%);
 }
+
 
 .headerContainer button {
   color: black;
@@ -37,7 +39,7 @@
   border-radius: 5px;
   cursor: pointer;
   justify-content: center;
-  background-color: #121619;
+  background-color: hsl(0, 25%, 30%);
   height: 50px;
   width: 180px;
   color: white;
@@ -92,4 +94,6 @@
     background-color: rgb(225, 225, 225);
     color: #121619;
   }
+
+  
 }
