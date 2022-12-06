@@ -27,12 +27,19 @@
     justify-content: center;
     gap: 1rem;
   }
-  
+
   .navbar a {
     color: #fffafa;
     text-decoration: none;
     margin: 20px;
   }
+
+  /*Da tekst promijeni boju kada se misem predje preko njega */
+  .navbar a:hover {
+    color: hsl(0, 25%, 30%);
+    text-decoration: none;
+  }
+  
   
   .navbar .rightSide button {
     background-color: transparent;

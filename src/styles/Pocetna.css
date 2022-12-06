@@ -13,6 +13,7 @@
 .headerContainer {
   
   width: auto;
+
 }
 
 .headerContainer h1 {
@@ -21,7 +22,7 @@
   height: 60px;
   font-weight: 50;
   color: hsl(0,25%,40%);
-  
+
 }
 
 .headerContainer p {
@@ -30,6 +31,8 @@
   font-size: 40px;
   font-weight: lighter;
   color: hsl(0, 25%, 44%);
+  position: relative;
+  
 }
 
 
@@ -45,6 +48,7 @@
   color: white;
   text-decoration: none;
   font-size: 20px;
+ 
 }
 
 .headerContainer button:hover {
@@ -77,6 +81,7 @@
     font-size: 40px;
     height: 30px;
     color: white;
+    
   }
 
   .headerContainer p {
