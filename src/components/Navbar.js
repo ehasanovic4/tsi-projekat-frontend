@@ -3,6 +3,7 @@ import Logo from '../assets/logo.jpg';
 import {Link} from 'react-router-dom';
 import '../styles/Navbar.css';
 import ReorderIcon from '@mui/icons-material/Reorder';
+import styled from '@emotion/styled';
 
 function Navbar() {
     const [openLinks, setOpenLinks] = useState(false)
@@ -13,7 +14,9 @@ function Navbar() {
   return (
     <div className="navbar">
         <div className="leftSide" id={openLinks ? "open" : "close"}>
-            <img src={Logo}/>
+            <ImageWrapper>
+                <Image src={Logo}/>
+            </ImageWrapper>
             <div className='hiddenLinks'>
             <Link to="/">Početna</Link>
             <Link to="/onama">O nama</Link>
@@ -33,5 +36,14 @@ function Navbar() {
     </div>
   )
 }
+
+const Image = styled.img`
+    width: 100%;
+`
+
+const ImageWrapper = styled.div`
+    width: 70px;
+    border-radius: 50%;
+`
 
 export default Navbar

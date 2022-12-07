@@ -14,11 +14,13 @@
   }
   
   .uslugeLista {
-    width: 100vw;
+    width: 100%;
     height: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     place-items: center;
+
+    padding-bottom: 50px;
   }
   
   /* MENU ITEM STYLING */
@@ -52,8 +54,8 @@
   }
   
   @media only screen and (max-width: 1300px) {
-    .uslugeLista {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+    .uslugeLista { 
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     }
   }
   

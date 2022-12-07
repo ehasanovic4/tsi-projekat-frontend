@@ -23,9 +23,14 @@
     align-items: center;
     margin-top: 50px;
   }
+
+
+  .onameBottomParagraph{
+    margin: 0 30px 20px;
+  }
   
   .onamaBottom p {
-    width: 1000px;
+    margin: 0 30px;
   }
   
   .onama .onamaBottom h1 {
