@@ -7,6 +7,8 @@ import '../styles/Footer.css';
 
 function Footer() {
   return (
+    <div className="footerWrapper">
+        <div className="gradient"></div>
     <div className="footer">
       <div className="socialMedia">
         <InstagramIcon/>
@@ -15,6 +17,7 @@ function Footer() {
         <PhoneIcon/>
       </div>
       <p> &copy; 2022 glowup.com</p>
+    </div>
     </div>
   );
 }
