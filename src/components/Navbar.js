@@ -36,7 +36,6 @@ function Navbar() {
         </div>  
     </div>
     <div className="gradient"></div>
-
     </div>
 
    
