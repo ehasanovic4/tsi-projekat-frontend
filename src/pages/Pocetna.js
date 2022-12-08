@@ -16,10 +16,12 @@ function Pocetna() {
           <Link to="/Rezervisi">
             <Button> Rezerviši već danas </Button>
           </Link>
+          
       </MainContent>
     </MainWrapper>
   )
 }
+
 
 
 

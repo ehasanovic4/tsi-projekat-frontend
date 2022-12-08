@@ -29,6 +29,7 @@ function Onama() {
               se zbog čega smo drugačiji i po čemu jedinstveni.. </p>
         </div>
     </div>
+    
   )
 }
 
