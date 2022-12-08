@@ -6,6 +6,9 @@ import Onama from './pages/Onama';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import Rezervisi from './pages/Rezervisi';
 import Usluge from './pages/Usluge';
+import Calendar from './pages/Calendar';
+
+/* Linija 23 dodana za kalendar!*/
 
 function App() {
   return (
@@ -17,6 +20,7 @@ function App() {
         <Route exact path="/Rezervisi" element = {<Rezervisi/>}/> 
         <Route exact path="/Onama" element = {<Onama/>}/> 
         <Route exact path="/Usluge" element = {<Usluge/>}/> 
+        <Route exact path="/Kalendar" element = {<Calendar/>}/> 
       </Routes>
       <Footer />
       </Router>

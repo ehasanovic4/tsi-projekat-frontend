@@ -10,6 +10,7 @@ function Navbar() {
     const toggleNavbar = () => {
         setOpenLinks(!openLinks);
     }
+/* Linija 27 i 35 dodana za kalendar!*/
 
   return (
     <div className="navbarWrapper"> 
@@ -23,6 +24,7 @@ function Navbar() {
             <Link to="/onama">O nama</Link>
             <Link to="/usluge">Usluge</Link>
             <Link to="/rezervisi">Rezerviši</Link>
+           <Link to="/kalendar">Kalendar</Link> 
             </div>
         </div>  
         <div className="rightSide">
@@ -30,6 +32,7 @@ function Navbar() {
             <Link to="/onama">O nama</Link>
             <Link to="/usluge">Usluge</Link>
             <Link to="/rezervisi">Rezerviši</Link>
+            <Link to="/kalendar">Kalendar</Link>  
             <button onClick={toggleNavbar}>
             <ReorderIcon/>
             </button>
