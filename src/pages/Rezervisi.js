@@ -1,54 +1,88 @@
 
-import React from 'react'
+import React, { useState } from 'react'
 import SlikaPozadine from "../assets/rezervisi_back.png"
 import '../styles/Rezervisi.css'
 import {Link} from 'react-router-dom';
+import styled from '@emotion/styled';
+
+function getDate(){
+  return [new Date().getMonth() + 1, new Date().getFullYear()]
+}
+
+function daysInMonth (month, year) {
+  return new Date(year, month, 0).getDate();
+} 
 
 function Rezervisi() {
+  const date = getDate();
+  const [day, setDay] = useState(null);
+  const numberOfDays = new Array(daysInMonth(date[1], date[0]) + 1).fill(0);
+    const onClickHanlder = (e)=>{
+        console.log("" + Object.values(e.target)[1].children + "<");
+        setDay(Object.values(e.target)[1].children);
+        //ovdje ide redirect na drugu stranicu npr /termin?dan=day
+      }
+  
+    
   return (
-    <div className='pocetna' style={{backgroundImage: `url(${SlikaPozadine})`}}>
-      <div className='rezervisi'>
-      <h1>Rezerviši uslugu: </h1>
-     {/* ovdje kasnije dodati link na odabranu uslugu */ }
-     <p> </p>
-      <label> Odabrana usluga: <Link to="/Usluge"> Njega kose </Link>
-    <p></p> 
-    {/* ovo potencijalno razviti - da izbaci samo listu ostalih usluga */}
-      Promijeni izbor:
-      <select>
-  <option value="Njega kose">Njega kose</option>
-  <option selected value="Njega lica">Njega lica</option>
-  <option value="Njega ruku i noktiju">Njega ruku i noktiju</option>
-  <option value="Njega tijela">Njega tijela</option>
-</select></label>
-      <p> </p>
-    <form>
-  <label>
-    Ime: 
-    <input type="text"  style={{color: 'crimson', lineHeight : 2, padding: 7 }} name="ime"/>
-    <p></p></label>
-  <label>
-    Prezime: 
-    <input type="text" style={{ color: 'crimson', lineHeight : 2, padding: 7 }} lastname="Prezime"/>
-    <p></p> </label>
-  <label>
-    E-mail: 
-    <input type="text" style={{ color: 'crimson', lineHeight : 2, padding: 7 }} email="E-mail"/>
-    <p></p>
-  </label>
-  Napomene:
-  <textarea style={{ color: 'indianred', lineHeight : 2, padding: 7 }}>
-    Unesite dodatne napomene ili poruku za Vaš termin. </textarea> 
-<p></p>
-{/* potencijalno jos dodati checkbox za 'Da li zelite primati obavijesti?' */}
-<input type="submit" style={{ color: 'crimson', lineHeight : 2, padding: 10 }} value="Rezerviši" />
-
-
-</form>
-
-    </div>
+    <div className='pocetna'>
+      {day ? <div>Izabrani dan: {day}</div>: <div>Izabrite dan</div>}
+      <DatePickerWrapper>
+        {
+          numberOfDays.map((day, index) => (
+            <Button onClick={onClickHanlder} key={index}>
+              {index + 1}
+            </Button>
+          ))
+        }
+      </DatePickerWrapper>
+      {/* <ButtonPicker onClick={onClickHanlder}>Rezerviši</ButtonPicker> */}
    </div>
   )
 }
+
+const ButtonPicker = styled.button`
+  width: 200px;
+  margin: 0 auto;
+
+  height: 60px;
+  border-radius: 10px;
+
+  font-size: 20px;
+  font-weigth: 700;
+
+  margin-bottom: 30px;
+  &:hover{
+    scale: 1.1;
+  }
+`
+
+const DatePickerWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+  height: 100%;
+`
+
+const Button = styled.button`
+  width: 130px;
+  padding: 10px;
+  background: rgba(0,0,0,0.3);
+  border-radius: 10px;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  &:hover{
+    scale: 1.05;
+    background: rgba(0,0,0,0.1);
+    
+  box-shadow: 15px 0px 35px rgba(0, 0, 0,0.3);
+  }
+
+`
 
 export default Rezervisi
