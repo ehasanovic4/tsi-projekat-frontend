@@ -13,7 +13,7 @@ function Pocetna() {
       <MainContent>     
           <h1>GLOW UP</h1>
           <p>Mjesto gdje brinemo o Vašoj ljepoti</p>
-          <Link to="/Rezervisi">
+          <Link to="/Kalendar">
             <Button> Rezerviši već danas </Button>
           </Link>
           

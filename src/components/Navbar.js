@@ -23,16 +23,16 @@ function Navbar() {
             <Link to="/">Početna</Link>
             <Link to="/onama">O nama</Link>
             <Link to="/usluge">Usluge</Link>
-            <Link to="/rezervisi">Rezerviši</Link>
-           <Link to="/kalendar">Kalendar</Link> 
+            {/*<Link to="/rezervisi">Rezerviši</Link>*/}
+           <Link to="/kalendar">Rezerviši termin</Link> 
             </div>
         </div>  
         <div className="rightSide">
             <Link to="/">Početna</Link>
             <Link to="/onama">O nama</Link>
             <Link to="/usluge">Usluge</Link>
-            <Link to="/rezervisi">Rezerviši</Link>
-            <Link to="/kalendar">Kalendar</Link>  
+{/*<Link to="/rezervisi">Rezerviši</Link>*/}
+            <Link to="/kalendar">Rezerviši termin</Link>  
             <button onClick={toggleNavbar}>
             <ReorderIcon/>
             </button>
