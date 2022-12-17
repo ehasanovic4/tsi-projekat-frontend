@@ -26,7 +26,7 @@ return (
         )
      })}
     <div>
-      {info ? `Vaš termin je zakazan za ${event}h, ${props.date.toDateString()}` : null}
+      {info ? `Odabrali ste ${event}h, ${props.date.toDateString()}, unesite podatke` : null}
     </div>
  </div>
   )
