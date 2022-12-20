@@ -16,7 +16,9 @@ function Footer() {
         <MailIcon/>
         <PhoneIcon/>
       </div>
-      <p> &copy; 2022 glowup.com</p>
+      <p> &copy; 2022 glowup.com </p>
+      <p> All rights reserved. </p>
+      
     </div>
     </div>
   );

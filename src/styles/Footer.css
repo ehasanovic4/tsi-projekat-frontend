@@ -1,13 +1,15 @@
 .footer {
   width: 100%;
-  height: 200px;
-  height: 90px;
+  height: 120px;
+ 
   background-color: hsl(0,25%,50%);
-  display: flex; /*cemu ovo, i sledeca dva */
+  /*display: flex; /*cemu ovo, i sledeca dva */
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-top: 10px;
+  /*padding-top: 10px;*/
+  line-height:0.5  /*sirina izmedju redova*/
+
 }
 
 .socialMedia svg { /*svg predstavlja neke oznake*/
