@@ -3,8 +3,7 @@
     /* text-align: center; */
     /*margin: 0 auto;*/
     width: 100%;
-    padding-right: 60px;
-    padding-left: 100px;
+    justify-content: center;
     display: flex;
     right: 80%;
     align-items: rigth;
@@ -13,6 +12,7 @@
     background-size: 100% 100%;
     color: hsl(0, 71%, 16%);
     background-color: #FAF4EC;
+    padding-bottom: 10% ;
   }
 
   
@@ -25,6 +25,7 @@
 
 .UnosPodataka {
   width: 70%;
+
    
   
 
@@ -59,7 +60,7 @@
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.125em;
     margin: 0 auto;
-    width: 50%;
+    width: 70%;
     border-radius: 8px;
 
   }
@@ -83,8 +84,10 @@
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
  
-      margin: 0;
-      width: 100%;
+      margin: 0 auto;
+      width: 50;
+
+
   
   }
   .react-calendar button {

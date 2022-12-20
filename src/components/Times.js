@@ -12,6 +12,8 @@ function Times(props) {
  function displayInfo(e) {
    setInfo(true);
    setEvent(e.target.innerText);
+   props.handleClickToOpen();
+   props.setTime(e.target.innerText); 
 }
 
 return (
@@ -25,9 +27,9 @@ return (
     </div>
         )
      })}
-    <div>
+     {/* <div>
       {info ? `Odabrali ste ${event}h, ${props.date.toDateString()}, unesite podatke` : null}
-    </div>
+    </div> */} 
  </div>
   )
 }
