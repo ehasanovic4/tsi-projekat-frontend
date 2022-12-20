@@ -12,7 +12,7 @@ function Pocetna() {
       </ImageWrapper>
       <MainContent>     
           <h1>GLOW UP</h1>
-          <p>Mjesto gdje brinemo o Vašoj ljepoti</p>
+          <p>Mjesto gdje brinemo o Vašoj ljepoti proba</p>
           <Link to="/Kalendar">
             <Button> Rezerviši već danas </Button>
           </Link>
