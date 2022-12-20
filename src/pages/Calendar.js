@@ -56,6 +56,13 @@ function Kalendar() {
         {/* Popunjavanje forme za rezervaciju */}
         <div className="pocetna">
           <div className="rezervisi">
+            Odaberite uslugu: 
+            <select> 
+              <option> Njega kose</option>
+              <option> Njega lica</option>
+              <option> Njega ruku i noktiju</option>
+              <option> Njega tijela</option>
+            </select>
             <form>
               <p> </p>
               <p> </p>
