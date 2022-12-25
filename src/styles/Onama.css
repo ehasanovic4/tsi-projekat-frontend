@@ -1,6 +1,6 @@
 .onama {
     width: 100%;
-    height: 90vh;
+    height: 150vh;
     display: flex;
     flex-direction: column;
     color: hsl(0,25%,40%);
@@ -8,7 +8,7 @@
   
   .onamaTop {
     width: 100%;
-    height: 60%;
+    height: 40%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -30,7 +30,7 @@
   }
   
   .onamaBottom p {
-    margin: 0 30px;
+    margin: 0 50px;
   }
   
   .onama .onamaBottom h1 {
@@ -42,3 +42,182 @@
     justify-content: center;
     transform: translateY(-40px);
   }
+
+  /* --------------------------------*/
+/* TESTIMONIALS                    */
+/* --------------------------------*/
+
+.section-testimonials {
+ background-image: linear-gradient(rgba(139, 16, 53, 0.704), rgba(0, 0, 0, 0)),  url(/assets/pozadina_roza.png);
+  background-size:cover;
+ color:antiquewhite; 
+  background-attachment: fixed; /*slika uvijek na istom mjestu kako skrolamo */
+}
+
+blockquote {
+  padding: 2%;
+  font-style: italic;
+  line-height: 145%;
+  position: relative;
+  margin-top: 60px;
+}
+
+blockquote:before {
+  content: "\201C";   /*otvoren navodnik*/
+  font-size: 500%;
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  
+}
+cite {
+  font-size: 90%;
+  margin-top: 25px;
+  display: block;
+}
+
+cite img {
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+
+
+
+/*  SECTIONS  ============================================================================= */
+
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+
+/*  GROUPING  ============================================================================= */
+
+.row {
+    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+.row:before,
+.row:after {
+    content:"";
+    display:table;
+}
+.row:after {
+    clear:both;
+}
+
+/*  GRID COLUMN SETUP   ==================================================================== */
+
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+
+.col:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
+
+
+/*  REMOVE MARGINS AS ALL GO FULL WIDTH AT 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.col { 
+		/*margin: 1% 0 1% 0%;*/
+        margin: 0;
+	}
+}
+
+
+/*  GRID OF TWO   ============================================================================= */
+
+
+.span-2-of-2 {
+	width: 100%;
+}
+
+.span-1-of-2 {
+	width: 49.2%;
+}
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.span-2-of-2 {
+		width: 100%; 
+	}
+	.span-1-of-2 {
+		width: 100%; 
+	}
+}
+
+
+/*  GRID OF THREE   ============================================================================= */
+
+	
+.span-3-of-3 {
+	width: 100%; 
+}
+
+.span-2-of-3 {
+	width: 66.13%; 
+}
+
+.span-1-of-3 {
+	width: 32.26%; 
+}
+
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.span-3-of-3 {
+		width: 100%; 
+	}
+	.span-2-of-3 {
+		width: 100%; 
+	}
+	.span-1-of-3 {
+		width: 100%;
+	}
+}
+
+/*  GRID OF FOUR   ============================================================================= */
+
+	
+.span-4-of-4 {
+	width: 100%; 
+}
+
+.span-3-of-4 {
+	width: 74.6%; 
+}
+
+.span-2-of-4 {
+	width: 49.2%; 
+}
+
+.span-1-of-4 {
+	width: 23.8%; 
+}
+
+
+/*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
+
+@media only screen and (max-width: 480px) {
+	.span-4-of-4 {
+		width: 100%; 
+	}
+	.span-3-of-4 {
+		width: 100%; 
+	}
+	.span-2-of-4 {
+		width: 100%; 
+	}
+	.span-1-of-4 {
+		width: 100%; 
+	}
+}
