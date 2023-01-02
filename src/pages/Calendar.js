@@ -8,8 +8,7 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import Button from "@material-ui/core/Button";
-
-/*import slika from "../assets/slika_rezervisi.jpg"*/
+import Axios from "axios";
 
 function Kalendar() {
   const [date, setDate] = useState(new Date());
@@ -23,6 +22,7 @@ function Kalendar() {
 
   const [time, setTime] = useState("");
 
+
   const handleClickToOpen = () => {
     setOpen(true);
   };
@@ -30,6 +30,20 @@ function Kalendar() {
   const handleToClose = () => {
     setOpen(false);
   };
+
+ const createKorisnik = () => {
+  console.log("ahdas");
+    Axios.post("http://localhost:3001/createKorisnik",{
+      ime: name,
+      prezime: lastName,
+      email: email,
+      napomene: message,
+      
+    }).then((response) => {
+      alert("user created");
+    })
+    setOpen(false);
+}
 
   return (
     <div className="Calendar" /*style={{backgroundImage: `url(${slika})`}*/>
@@ -85,6 +99,7 @@ function Kalendar() {
                         Ime:
                         <input
                           type="text"
+                          placeholder='Ime...'
                           style={{
                             color: "crimson",
                             lineHeight: 2,
@@ -100,6 +115,7 @@ function Kalendar() {
                         Prezime:
                         <input
                           type="text"
+                          placeholder='Prezime...'
                           style={{
                             color: "crimson",
                             lineHeight: 2,
@@ -115,6 +131,7 @@ function Kalendar() {
                         E-mail:
                         <input
                           type="text"
+                          placeholder='E-mail...'
                           style={{
                             color: "crimson",
                             lineHeight: 2,
@@ -128,6 +145,7 @@ function Kalendar() {
                       </label>
                       Napomene:
                       <textarea
+                      placeholder='Unesite napomene...'
                         style={{
                           color: "indianred",
                           lineHeight: 2,
@@ -142,17 +160,13 @@ function Kalendar() {
                       <p></p>
                       {/* potencijalno jos dodati checkbox za 'Da li zelite primati obavijesti?' */}
                     </form>
-                  </div>
-
-            
-
-                </div>
-                
+                  </div>          
+                </div>                
               </DialogContentText>
             </DialogContent>
 
             <DialogActions>
-              <Button onClick={handleToClose} color="primary" autoFocus>
+              <Button onClick={createKorisnik} color="primary" autoFocus>
                 <input
                   type="submit"
                   style={{
@@ -168,74 +182,6 @@ function Kalendar() {
           </Dialog>
         </div>
       </div>
-
-      {/* <div className="UnosPodataka">
-        <h2> Unesite podatke </h2>
-         Popunjavanje forme za rezervaciju 
-        <div className="pocetna">
-          <div className="rezervisi">
-            Odaberite uslugu:
-            <select>
-              <option> Njega kose</option>
-              <option> Njega lica</option>
-              <option> Njega ruku i noktiju</option>
-              <option> Njega tijela</option>
-            </select>
-            <form>
-              <p> </p>
-              <p> </p>
-              <label>
-                Ime:
-                <input
-                  type="text"
-                  style={{ color: "crimson", lineHeight: 2, padding: 7 }}
-                  name="ime"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-                />
-                <p></p>
-              </label>
-              <label>
-                Prezime:
-                <input
-                  type="text"
-                  style={{ color: "crimson", lineHeight: 2, padding: 7 }}
-                  lastname="Prezime"
-                  value={lastName}
-                  onChange={(e) => setLastName(e.target.value)}
-                />
-                <p></p>{" "}
-              </label>
-              <label>
-                E-mail:
-                <input
-                  type="text"
-                  style={{ color: "crimson", lineHeight: 2, padding: 7 }}
-                  email="E-mail"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-                <p></p>
-              </label>
-              Napomene:
-              <textarea
-                style={{ color: "indianred", lineHeight: 2, padding: 10 }}
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-              >
-                Unesite dodatne napomene ili poruku za Vaš termin.{" "}
-              </textarea>
-              <p></p>
-              {/* potencijalno jos dodati checkbox za 'Da li zelite primati obavijesti?' 
-              <input
-                type="submit"
-                style={{ color: "crimson", lineHeight: 2, padding: 7 }}
-                value="Rezerviši"
-              />
-            </form>
-          </div>
-        </div>
-      </div> */}
     </div>
   );
 }

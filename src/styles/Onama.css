@@ -48,7 +48,7 @@
 /* --------------------------------*/
 
 .section-testimonials {
- background-image: linear-gradient(rgba(139, 16, 53, 0.704), rgba(0, 0, 0, 0)),  url(/assets/pozadina_roza.png);
+ background-image: linear-gradient(rgba(139, 16, 53, 0.704), rgba(0, 0, 0, 0));
   background-size:cover;
  color:antiquewhite; 
   background-attachment: fixed; /*slika uvijek na istom mjestu kako skrolamo */
