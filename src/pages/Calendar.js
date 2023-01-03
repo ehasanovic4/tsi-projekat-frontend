@@ -38,15 +38,16 @@ function Kalendar() {
       prezime: lastName,
       email: email,
       napomene: message,
-      
+      dan: date.toDateString(), 
+      vrijeme: time,     
     }).then((response) => {
-      alert("user created");
+      setOpen(false);
     })
     setOpen(false);
 }
 
   return (
-    <div className="Calendar" /*style={{backgroundImage: `url(${slika})`}*/>
+    <div className="Calendar">
       <div className="CalTopAndBottom">
         <div className="CalendarTop">
           <h3 className="header">Odaberite datum termina:</h3>
@@ -76,7 +77,7 @@ function Kalendar() {
           )}
           {/* <Time showTime={showTime} date={date} open={open} /> */}
 
-            <Time showTime={showTime} date={date} handleClickToOpen={handleClickToOpen} setTime={setTime} />
+            <Time showTime={showTime} handleClickToOpen={handleClickToOpen} setTime={setTime} />
 
           <Dialog open={open} onClose={handleToClose}>
             <DialogTitle>{"Unesite podatke"}</DialogTitle>
@@ -173,7 +174,6 @@ function Kalendar() {
                     color: "crimson",
                     lineHeight: 2,
                     padding: 7,
-                    /*  textAlign: 'center'*/
                   }}
                   value="Rezerviši"
                 />
