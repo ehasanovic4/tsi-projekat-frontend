@@ -17,6 +17,7 @@ function Kalendar() {
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
+  const [usluga, setUsluga] = useState("Njega lica");
 
   const [open, setOpen] = React.useState(false);
 
@@ -31,6 +32,10 @@ function Kalendar() {
     setOpen(false);
   };
 
+  const handleChange = (event) => {
+    setUsluga(event.target.value); 
+  };
+
  const createKorisnik = () => {
   console.log("ahdas");
     Axios.post("http://localhost:3001/createKorisnik",{
@@ -39,11 +44,16 @@ function Kalendar() {
       email: email,
       napomene: message,
       dan: date.toDateString(), 
-      vrijeme: time,     
+      vrijeme: time,
+      usluga: usluga,     
     }).then((response) => {
       setOpen(false);
     })
     setOpen(false);
+    setName("");
+    setLastName("");
+    setEmail("");
+    setMessage("");
 }
 
   return (
@@ -75,8 +85,7 @@ function Kalendar() {
               {date.toDateString()}
             </p>
           )}
-          {/* <Time showTime={showTime} date={date} open={open} /> */}
-
+          
             <Time showTime={showTime} handleClickToOpen={handleClickToOpen} setTime={setTime} />
 
           <Dialog open={open} onClose={handleToClose}>
@@ -86,16 +95,36 @@ function Kalendar() {
               <DialogContentText>
                 <div className="pocetna">
                   <div className="rezervisi">
+                  <label>
                     Odaberite uslugu: 
-                    <select>
-                      <option> Njega kose</option>
-                      <option> Njega lica</option>
-                      <option> Njega ruku i noktiju</option>
-                      <option> Njega tijela</option>
+                    <select value={usluga} onChange={handleChange}> 
+
+                      <option 
+                      usluga="Njega kose"
+                      > 
+                      Njega kose
+                      </option>
+
+                      <option 
+                      usluga="Njega lica"
+                      > 
+                      Njega lica
+                      </option>
+
+                      <option 
+                      usluga="Njega ruku i noktiju"
+                      > 
+                      Njega ruku i noktiju
+                      </option>
+
+                      <option 
+                      usluga="Njega tijela"
+                      > 
+                      Njega tijela
+                      </option>
                     </select>
+                    </label>
                     <form>
-                      <p> </p>
-                      <p> </p>
                       <label>
                         Ime:
                         <input
@@ -110,7 +139,6 @@ function Kalendar() {
                           value={name}
                           onChange={(e) => setName(e.target.value)}
                         />
-                        <p></p>
                       </label>
                       <label>
                         Prezime:
@@ -126,7 +154,6 @@ function Kalendar() {
                           value={lastName}
                           onChange={(e) => setLastName(e.target.value)}
                         />
-                        <p></p>{" "}
                       </label>
                       <label>
                         E-mail:
@@ -142,7 +169,6 @@ function Kalendar() {
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
                         />
-                        <p></p>
                       </label>
                       Napomene:
                       <textarea
@@ -157,9 +183,7 @@ function Kalendar() {
                       >
                         Unesite dodatne napomene ili poruku za Vaš termin.{" "}
                       </textarea>
-                      Odabrali ste {time}h, {date.toDateString()}
-                      <p></p>
-                      {/* potencijalno jos dodati checkbox za 'Da li zelite primati obavijesti?' */}
+                      Odabrali ste {time}h, {date.toDateString()}                      
                     </form>
                   </div>          
                 </div>                
