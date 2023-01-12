@@ -9,6 +9,7 @@ import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
 import Button from "@material-ui/core/Button";
 import Axios from "axios";
+import validator from "validator";
 
 function Kalendar() {
   const [date, setDate] = useState(new Date());
@@ -37,27 +38,35 @@ function Kalendar() {
   };
 
  const createKorisnik = () => {
-  console.log("ahdas");
-    Axios.post("http://localhost:3001/createKorisnik",{
+  if(!name || !lastName || !email){
+    alert("Polja za ime, prezime i email moraju biti popunjena");
+  }
+  else if(!validator.isEmail(email)){
+    alert("Unesite ispravan email");
+  }
+  else{
+    Axios.post("http://localhost:3001/createKorisnik",{      
       ime: name,
       prezime: lastName,
       email: email,
       napomene: message,
       dan: date.toDateString(), 
       vrijeme: time,
-      usluga: usluga,     
+      usluga: usluga,  
     }).then((response) => {
       setOpen(false);
-    })
+    })  
     setOpen(false);
+  }
     setName("");
     setLastName("");
     setEmail("");
     setMessage("");
+  
 }
 
   return (
-    <div className="Calendar">
+    <div className="Calendar" >
       <div className="CalTopAndBottom">
         <div className="CalendarTop">
           <h3 className="header">Odaberite datum termina:</h3>

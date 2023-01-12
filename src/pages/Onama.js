@@ -10,7 +10,7 @@ import cost3 from "../assets/customer-3.jpg"
 
 function Onama() {
   return (
-    <div className='onama'>
+    <div className='onama' data-testid="onama-1">
         <div 
         className='onamaTop' 
         style={{backgroundImage: `url(${SlikaPozadine})`}}>
