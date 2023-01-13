@@ -38,8 +38,15 @@ function Kalendar() {
   };
 
  const createKorisnik = () => {
+  //var letters = /^[A-Za-z]+$/;
   if(!name || !lastName || !email){
     alert("Polja za ime, prezime i email moraju biti popunjena");
+  }
+  else if(!validator.isAlpha(name)){
+    alert("Unesite ispravno ime");
+  }
+  else if(!validator.isAlpha(lastName)){
+    alert("Unesite ispravno prezime");
   }
   else if(!validator.isEmail(email)){
     alert("Unesite ispravan email");
