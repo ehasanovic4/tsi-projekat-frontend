@@ -11,7 +11,9 @@ function Pocetna() {
         <Image src={Slika}/>
       </ImageWrapper>
       <MainContent>     
-          <h1>GLOW UP</h1>
+          <h1 data-testid="naslov">
+            GLOW UP
+          </h1>
           <p>Mjesto gdje brinemo o Vašoj ljepoti</p>
           <Link to="/Kalendar">
             <Button> Rezerviši već danas </Button>

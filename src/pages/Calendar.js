@@ -37,27 +37,42 @@ function Kalendar() {
   };
 
  const createKorisnik = () => {
-  console.log("ahdas");
-    Axios.post("http://localhost:3001/createKorisnik",{
+  //var letters = /^[A-Za-z]+$/;
+  if(!name || !lastName || !email){
+    alert("Polja za ime, prezime i email moraju biti popunjena");
+  }
+  else if(!validator.isAlpha(name)){
+    alert("Unesite ispravno ime");
+  }
+  else if(!validator.isAlpha(lastName)){
+    alert("Unesite ispravno prezime");
+  }
+  else if(!validator.isEmail(email)){
+    alert("Unesite ispravan email");
+  }
+  else{
+    Axios.post("http://localhost:3001/createKorisnik",{      
       ime: name,
       prezime: lastName,
       email: email,
       napomene: message,
       dan: date.toDateString(), 
       vrijeme: time,
-      usluga: usluga,     
+      usluga: usluga,  
     }).then((response) => {
       setOpen(false);
-    })
+    })  
     setOpen(false);
+  }
     setName("");
     setLastName("");
     setEmail("");
     setMessage("");
+  
 }
 
   return (
-    <div className="Calendar">
+    <div className="Calendar" >
       <div className="CalTopAndBottom">
         <div className="CalendarTop">
           <h3 className="header">Odaberite datum termina:</h3>
