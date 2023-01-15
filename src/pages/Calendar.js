@@ -81,6 +81,8 @@ function Kalendar() {
               onChange={setDate}
               value={date}
               onClickDay={() => setShowTime(true)}
+              minDate={new Date()}  //da se zabrani biranje prethodnih datuma!!!
+
             />
             <p> </p>
           </div>
