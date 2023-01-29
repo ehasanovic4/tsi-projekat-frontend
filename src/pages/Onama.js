@@ -45,14 +45,14 @@ function Onama() {
          <div class="col span-1-of-3">
                  <blockquote>
                  Salon "Glow up" je poseban po mnogo toga, ali ono što bih izdvojila je: uvijek potpuno posvećeni svom radu i klijentima, uz jako pristupačne cijene svih usluga. 
-                     <cite> <img src={cost1} alt="costumer 1" />(Lucy Duncan)</cite>
+                     <cite> <img src={cost1} alt="costumer 1" />(Elma Mujic)</cite>
                  </blockquote>
              </div>
              
                <div class="col span-1-of-3">
                  <blockquote>
                  Prilikom prve posjete "Glow up" salonu, osjetila sam veoma toplu i ugodnu atmosferu, međutim kvalitet usluga je ono što me posebno oduševilo.
-                     <cite><img src={cost2} alt="costumer 2" />(Joana Silva)</cite>
+                     <cite><img src={cost2} alt="costumer 2" />(Hana Sehovic)</cite>
                  </blockquote>
              </div>
              
@@ -61,7 +61,7 @@ function Onama() {
                  Ovo je jedini salon kojem potpuno vjerujem , kada je u pitanju njega moje kose. 
                  Koriste profesionalne linije proizvoda, svakom klijentu pristupaju na poseban način. 
                  
-                     <cite><img src={cost3} alt="costumer 3" />(Nora Chapman)</cite>
+                     <cite><img src={cost3} alt="costumer 3" />(Nora Bojic)</cite>
                  </blockquote>
              </div>
              
