@@ -44,26 +44,24 @@ function Onama() {
         
          <div class="col span-1-of-3">
                  <blockquote>
-                 Absolutely cannot recommend this salon enough, every time I go I get consistent, quality service.
-                  Pricing is more than reasonable.
-                     <cite> <img src={cost1} alt="costumer 1" />(Lucy Duncan)</cite>
+                 Salon "Glow up" je poseban po mnogo toga, ali ono što bih izdvojila je: uvijek potpuno posvećeni svom radu i klijentima, uz jako pristupačne cijene svih usluga. 
+                     <cite> <img src={cost1} alt="costumer 1" />(Elma Mujic)</cite>
                  </blockquote>
              </div>
              
                <div class="col span-1-of-3">
                  <blockquote>
-                 Just had my first appointment here and loved every bit of my experience with Glow Up.
-                 The service was great, the atmosphere was warm and welcoming.
-                     <cite><img src={cost2} alt="costumer 2" />(Joana Silva)</cite>
+                 Prilikom prve posjete "Glow up" salonu, osjetila sam veoma toplu i ugodnu atmosferu, međutim kvalitet usluga je ono što me posebno oduševilo.
+                     <cite><img src={cost2} alt="costumer 2" />(Hana Sehovic)</cite>
                  </blockquote>
              </div>
              
                <div class="col span-1-of-3">
                  <blockquote>
-                 This is the only salon that I trust to properly deal with my hair.
-                 Their extensive knowledge and skill are truly unmatched.
+                 Ovo je jedini salon kojem potpuno vjerujem , kada je u pitanju njega moje kose. 
+                 Koriste profesionalne linije proizvoda, svakom klijentu pristupaju na poseban način. 
                  
-                     <cite><img src={cost3} alt="costumer 3" />(Nora Chapman)</cite>
+                     <cite><img src={cost3} alt="costumer 3" />(Nora Bojic)</cite>
                  </blockquote>
              </div>
              
