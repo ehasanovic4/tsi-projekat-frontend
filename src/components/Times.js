@@ -19,7 +19,7 @@ function Times(props) {
 return (
  
  <div className="times">
-    <p>Slobodni termini:</p>
+    <p>Izaberite termin:</p>
    {time.map(times => {
     return (
     <div>

@@ -2,15 +2,17 @@ import React, { useState } from "react";
 import Calendar from "react-calendar";
 import "../styles/Calendar.css";
 import Time from "../components/Time.js";
-import Dialog from "@mui/material/Dialog";
-import DialogContentText from "@mui/material/DialogContentText";
-import DialogTitle from "@mui/material/DialogTitle";
-import DialogActions from "@mui/material/DialogActions";
-import DialogContent from '@mui/material/DialogContent';
-import Button from "@mui/material/Button";
+import Dialog from "@material-ui/core/Dialog";
+import DialogContentText from "@material-ui/core/DialogContentText";
+import DialogTitle from "@material-ui/core/DialogTitle";
+import DialogActions from "@material-ui/core/DialogActions";
+import DialogContent from "@material-ui/core/DialogContent";
+import Button from "@material-ui/core/Button";
+import Axios from "axios";
+import validator from "validator";
+
 
 function Kalendar() {
-  const Axios = require('axios').default
   const [date, setDate] = useState(new Date());
   const [showTime, setShowTime] = useState(false);
   const [name, setName] = useState("");
@@ -36,43 +38,48 @@ function Kalendar() {
     setUsluga(event.target.value); 
   };
 
- const createKorisnik = () => {
-  //var letters = /^[A-Za-z]+$/;
-  if(!name || !lastName || !email){
-    alert("Polja za ime, prezime i email moraju biti popunjena");
-  }
-  else if(!validator.isAlpha(name)){
-    alert("Unesite ispravno ime");
-  }
-  else if(!validator.isAlpha(lastName)){
-    alert("Unesite ispravno prezime");
-  }
-  else if(!validator.isEmail(email)){
-    alert("Unesite ispravan email");
-  }
-  else{
-    Axios.post("http://localhost:3001/createKorisnik",{      
-      ime: name,
-      prezime: lastName,
-      email: email,
-      napomene: message,
-      dan: date.toDateString(), 
-      vrijeme: time,
-      usluga: usluga,  
-    }).then((response) => {
+  const createKorisnik = () => {
+    if(!name || !lastName || !email){
+      alert("Polja za ime, prezime i email moraju biti popunjena");
+      setName("");
+      setLastName("");
+      setEmail("");
+    }
+    else if(!validator.isAlpha(name)){
+      alert("Unesite ispravno ime");
+      setName("");
+    }
+    else if(!validator.isAlpha(lastName)){
+      alert("Unesite ispravno prezime");
+      setLastName("");
+    }
+    else if(!validator.isEmail(email)){
+      alert("Unesite ispravan email");
+      setEmail("");
+    }
+    else{
+      Axios.post("http://localhost:3001/createKorisnik",{      
+        ime: name,
+        prezime: lastName,
+        email: email,
+        napomene: message,
+        dan: date.toDateString(), 
+        vrijeme: time,
+        usluga: usluga,  
+      }).then((response) => {
+        setOpen(false);
+      })  
       setOpen(false);
-    })  
-    setOpen(false);
+    }
+      setName("");
+      setLastName("");
+      setEmail("");
+      setMessage("");
+    
   }
-    setName("");
-    setLastName("");
-    setEmail("");
-    setMessage("");
-  
-}
 
   return (
-    <div className="Calendar" >
+    <div className="Calendar">
       <div className="CalTopAndBottom">
         <div className="CalendarTop">
           <h3 className="header">Odaberite datum termina:</h3>
@@ -81,8 +88,7 @@ function Kalendar() {
               onChange={setDate}
               value={date}
               onClickDay={() => setShowTime(true)}
-              minDate={new Date()}  //da se zabrani biranje prethodnih datuma!!!
-
+              minDate={new Date()}
             />
             <p> </p>
           </div>

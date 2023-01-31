@@ -26,3 +26,8 @@
 .footer p {
   color: white; /*jer su po defaultu crna slova*/
 }
+
+.MuiButton-root{
+margin-top: 100px;
+
+}
